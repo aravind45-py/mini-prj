@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Plants.css') }}" >
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+</head>
+<body>
+    <a name="top"></a>
+    <header>
+        <a href="{{url_for('home')}}" class="logo">GEIA SOU</a>
+        <div class="menu-toggle"></div>
+        <nav>
+            <ul>
+                <li><a href="{{url_for('dashboard')}}" class="active">Home</a></li>
+                <li><a href="#bot">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+    </header>
+
+    <br><br><br><br><br>
+    <div class="middle">
+        <div class="s">
+            <div class="s__wrp swiper-wrapper">
+
+
+              <div class="s__item swiper-slide">
+                <div class="s__img">
+                  <img src="https://gardenerspath.com/wp-content/uploads/2019/08/Frogeye-spots-Botryosphaeria-obtusa-on-apple-leaf-FB.jpg" alt="">
+                </div>
+                <div class="s__content">
+                  <div class="s__title">FOLIAR DISEASES IN TREES</div>
+                  <div class="s__text">Misdiagnosis of the many diseases impacting agricultural crops can lead to misuse of chemicals leading to the emergence of resistant pathogen strains, increased input costs, and more outbreaks with significant economic loss and environmental impacts. </div>
+                  <a href="#" class="s__button">TRY NOW</a>
+                </div>
+              </div>
+              
+              <div class="s__item swiper-slide">
+                <div class="s__img">
+                  <img src="https://plantvillage-production-new.s3.amazonaws.com/images/pics/000/002/049/original/1234095-SMPT.jpg?1384891972" alt="">
+                </div>
+                <div class="s__content">
+                  <div class="s__title">Cotton Plant Disease Detection</div>
+                  <div class="s__text">Agriculture is an important backbone for any country and India is considered to be an agro-based country.It not only boosts various industries such as food industry and textile industry but when it comes to textile industry cotton producing crops hold a special position amongst all other textile crops.</div>
+                  <a href="{{url_for('cotton_scan')}}" class="s__button">TRY NOW</a>
+                </div>
+              </div>
+              
+              <div class="s__item swiper-slide">
+                <div class="s__img">
+                  <img src="https://171dxwjpaqv2danpq11ixf2j-wpengine.netdna-ssl.com/wp-content/uploads/2020/12/leaf-mold-passalora-fulva-on-tomato-foliage-joe-331x221.jpeg" alt="">
+                </div>
+                <div class="s__content">
+                  <div class="s__title">TOMATO DISEASES & DISORDERS</div>
+                  <div class="s__text">Tomatoes (Solanum lycopersicum) can be grown on almost any moderately well-drained soil type. A good supply of organic matter can increase yield and reduce production problems. Tomatoes and related vegetables, such as potatoes, peppers, and eggplants, should not be planted on the same land more than once in three years.</div>
+                  <a href="{{url_for('tomato_scan')}}" class="s__button">TRY NOW</a>
+                </div>
+              </div>
+
+              <div class="s__item swiper-slide">
+                <div class="s__img">
+                  <img src="https://neurohive.io/wp-content/uploads/2019/08/Screenshot-from-2019-08-26-23-19-05.png" alt="">
+                </div>
+                <div class="s__content">
+                  <div class="s__title">CASSAVA LEAF DISEASE</div>
+                  <div class="s__text">At least 80% of household farms in Sub-Saharan Africa grow this starchy root, but viral diseases are major sources of poor yields. With the help of data science, it may be possible to identify common diseases so they can be treated.</div>
+                  <a href="{{url_for('cassava_scan')}}" class="s__button">TRY NOW</a>
+                </div>
+              </div>
+              
+            </div>
+            <div class="s__pagination"></div>
+          </div>     
+    </div>
+    <br><br><br><br><br>
+
+
+    <footer>
+        <a name="bot"></a>
+        <div class="container">
+            <div class="sec aboutus">
+                <h2>About Us</h2>
+                <p>Today’s hospitals and medical institutions are extremly crowded.
+                    Doctors spends a lot of time in identifying problems in a patient.We tend to solve these problems by using images to identify possible diseases. </p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="{{url_for('dashboard')}}">Home</a></li>
+                    <li><a href="{{url_for('Human')}}">Humans</a></li>
+                    <li><a href="{{url_for('Plants')}}">Plants</a></li>
+                    <li><a href="#">Animals</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span>Chennai,Tamil Nadu</span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <p><a href="tel:1234567890">+91 1234567890</a><br><a href="tel:1234567890">+91 1234567890</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <p><a href="mailto:geiasou@gmail.com">geiasou@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2021 Geia Sou. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menu-toggle').click(function(){
+                $('.menu-toggle').toggleClass('active')
+                $('nav').toggleClass('active')
+            })
+        })
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+    <script src="{{url_for('static', filename='Human and Plants.js')}}"></script>
+</body>
+</html>

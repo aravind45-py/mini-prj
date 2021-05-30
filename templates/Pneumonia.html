@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Pneumonia.css') }}" >
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+</head>
+<body>
+    <a name="top"></a>
+    <header>
+        <a href="{{url_for('home')}}" class="logo">GEIA SOU</a>
+        <div class="menu-toggle"></div>
+        <nav>
+            <ul>
+                <li><a href="{{url_for('dashboard')}}" class="active">Home</a></li>
+                <li><a href="{{url_for('Human')}}">Human</a></li>
+                <li><a href="#bot">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+    </header>
+
+
+ <br>
+<br>
+<br>
+<br>
+
+    <div class="formC">
+        <form action="{{url_for('pnuemonia_scan')}}" method="post" enctype="multipart/form-data" >
+            <div class="mainbody">
+                <div class="container">
+
+                    <!--image preview-->
+                    <div class="imageprev" id="imageprev">
+                        <img src="" alt="Image Preview" class="ip">
+                    </div>
+
+                    <label class="custom-file-upload">
+                        <input type="file" name="image" id="fileToUpload">
+                        <div class="txt">select the image </div>
+                    </label>
+                    <input type="submit" value="Upload Image" name="submit" class="submit">
+                </div>
+            </div>
+        </form>
+
+    </div>
+<br>
+<br>
+<br>
+<br>
+    <script>
+        const inpFile = document.getElementById("fileToUpload");
+        const pContainer = document.getElementById("imageprev");
+        const pImage = pContainer.querySelector(".ip");
+
+        inpFile.addEventListener("change",function () {
+            const file = this.files[0];
+            if(file){
+                const reader = new FileReader();
+                pImage.style.display = "block";
+                reader.addEventListener("load", function () {
+                    pImage.setAttribute("src",this.result);
+                });
+                reader.readAsDataURL(file);
+            }else{
+                pImage.style.display = null;
+                pImage.setAttribute("src","");
+            }
+        });
+    </script>
+
+    </form>
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <a name="bot"></a>
+        <div class="container">
+            <div class="sec aboutus">
+                <h2>About Us</h2>
+                <p>Today’s hospitals and medical institutions are extremly crowded.
+                    Doctors spends a lot of time in identifying problems in a patient.We tend to solve these problems by using images to identify possible diseases. </p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="{{url_for('dashboard')}}">Home</a></li>
+                    <li><a href="{{url_for('Human')}}">Humans</a></li>
+                    <li><a href="{{url_for('Plants')}}">Plants</a></li>
+                    <li><a href="#">Animals</a></li>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span>Chennai,Tamil Nadu</span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <p><a href="tel:1234567890">+91 1234567890</a><br><a href="tel:1234567890">+91 1234567890</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <p><a href="mailto:geiasou@gmail.com">geiasou@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2021 Geia Sou. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menu-toggle').click(function(){
+                $('.menu-toggle').toggleClass('active')
+                $('nav').toggleClass('active')
+            })
+        })
+    </script>
+</body>
+</html>

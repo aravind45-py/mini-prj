@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Home.css') }}" >
+</head>
+<body>
+    <div class="main">
+        <div class="sakura">
+            <img src="../static/Images/sakura1.png"/>
+            <img src="../static/Images/sakura2.png"/>
+            <img src="../static/Images/sakura1.png"/>
+            <img src="../static/Images/sakura2.png"/>
+            <img src="../static/Images/sakura1.png"/>
+            <img src="../static/Images/sakura2.png"/>
+            <img src="../static/Images/sakura1.png"/>
+            <img src="../static/Images/sakura2.png"/>
+            <img src="../static/Images/sakura1.png"/>
+            <img src="../static/Images/sakura2.png"/>
+            <img src="../static/Images/sakura1.png"/>
+            <img src="../static/Images/sakura2.png"/>
+            <img src="../static/Images/sakura1.png"/>
+            <img src="../static/Images/sakura2.png"/>
+            <img src="../static/Images/sakura1.png"/>
+            <img src="../static/Images/sakura2.png"/>
+            <img src="../static/Images/sakura1.png"/>
+            <img src="../static/Images/sakura2.png"/>
+        </div>
+        
+        <div class="slider">
+            <div class="myslide fade">
+                <div class="txt">
+                    <h1>Problem we face</h1>
+                    <p>Today’s hospitals and medical institutions are extremly crowded.
+                        Doctors spends a lot of time in identifying problems in a patient.</p>
+                </div>
+            </div>
+            <div class="myslide fade">
+                <div class="txt">
+                    <h1>Proposed Solution</h1>
+                    <p>We tend to solve these problems by using images to identify possible diseases. </p>
+                </div>
+            </div>
+            <div class="myslide fade">
+                <div class="txt">
+                    <h1>Welcome to GEIA SOU</h1>
+                    <p>know the malady of species...</p>
+                    <a href="{{url_for('dashboard')}}">Try Now</a>
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="dotsbox" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{url_for('static', filename='Home.js')}}"></script>
+</body>
+</html>

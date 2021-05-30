@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Humans.css') }}" >
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+</head>
+<body>
+    <a name="top"></a>
+    <header>
+        <a href="{{url_for('home')}}" class="logo">GEIA SOU</a>
+        <div class="menu-toggle"></div>
+        <nav>
+            <ul>
+                <li><a href="{{url_for('dashboard')}}" class="active">Home</a></li>
+                <li><a href="#bot">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+    </header>
+
+    <br><br><br><br><br>
+    <div class="middle">
+        <div class="s">
+            <div class="s__wrp swiper-wrapper">
+
+
+              <div class="s__item swiper-slide">
+                <div class="s__img">
+                  <img src="https://miro.medium.com/max/1200/1*SGlxXujQRE4sQsTkzmIBFg.jpeg" alt="">
+                </div>
+                <div class="s__content">
+                  <div class="s__title">INTRACRANIAL HEMORRHAGE DETECTION</div>
+                  <div class="s__text">It is the bleeding that occurs inside the cranium.When a patient shows acute neurological symptoms such as severe headache or loss of consciousness, highly trained specialists review medical images of the patient’s cranium to look for the presence, location and type of hemorrhage. The process is complicated and often time-consuming. The program analyses images of Xrays to detect. </div>
+                  <a href="{{url_for('intercranial_scan')}}" class="s__button">TRY NOW</a>
+                </div>
+              </div>
+              
+              <div class="s__item swiper-slide">
+                <div class="s__img">
+                  <img src="https://miro.medium.com/max/1200/1*kpnTxhCtAsMcMEacmkwkMQ.jpeg" alt="">
+                </div>
+                <div class="s__content">
+                  <div class="s__title">PNEUMONIA DETECTION</div>
+                  <div class="s__text">Pneumonia is an inflammatory condition of the lung affecting primarily the small air sacs known as alveoli. Symptoms typically include some combination of productive or dry cough, chest pain, fever and difficulty breathing. The severity of the condition is variable. The program will analyze these using Xrays.</div>
+                  <a href="{{url_for('pnuemonia_scan')}}" class="s__button">TRY NOW</a>
+                </div>
+              </div>
+              
+              <div class="s__item swiper-slide">
+                <div class="s__img">
+                  <img src="https://i.ytimg.com/vi/BxRAAVr7oA8/maxresdefault.jpg" alt="">
+                </div>
+                <div class="s__content">
+                  <div class="s__title">RETINAL DISORDER USING OCT</div>
+                  <div class="s__text">Optical Coherence Tomography is a non-invasive imaging technology used to obtain high resolution cross-sectional images of the retina. The layers within the retina can be differentiated and retinal thickness can be measured to aid in the early detection and diagnosis of retinal diseases and conditions.</div>
+                  <a href="{{url_for('oct_scan')}}" class="s__button">TRY NOW</a>
+                </div>
+              </div>
+              
+            </div>
+            <div class="s__pagination"></div>
+          </div>     
+    </div>
+    <br><br><br><br><br>
+
+    <footer>
+        <a name="bot"></a>
+        <div class="container">
+            <div class="sec aboutus">
+                <h2>About Us</h2>
+                <p>Today’s hospitals and medical institutions are extremly crowded.
+                    Doctors spends a lot of time in identifying problems in a patient.We tend to solve these problems by using images to identify possible diseases. </p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="Dashboard.html">Home</a></li>
+                    <li><a href="#top">Humans</a></li>
+                    <li><a href="Plants.html">Plants</a></li>
+                    <li><a href="Animals.html">Animals</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span>Chennai,Tamil Nadu</span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <p><a href="tel:1234567890">+91 1234567890</a><br><a href="tel:1234567890">+91 1234567890</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <p><a href="mailto:geiasou@gmail.com">geiasou@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2021 Geia Sou. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menu-toggle').click(function(){
+                $('.menu-toggle').toggleClass('active')
+                $('nav').toggleClass('active')
+            })
+        })
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+    <script src="{{url_for('static', filename='Human and Plants.js')}}"></script>
+</body>
+</html>
