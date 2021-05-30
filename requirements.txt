@@ -95,7 +95,6 @@ pyrsistent
 pysort
 python-dateutil
 pytz
-pywinpty
 PyYAML
 pyzmq
 requests
